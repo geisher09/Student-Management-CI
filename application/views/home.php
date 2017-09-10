@@ -31,9 +31,9 @@
 						<td><?php echo $student->course; ?></td>
 						<td><?php echo $student->sex; ?></td>
 						<td>
-							<?php echo anchor("home/profile", 'View Student', ['class'=>'btn btn-info'],['role'=>'button']); ?>
+							<?php echo anchor("home/view/{$student->id}", 'View Student', ['class'=>'btn btn-info'],['role'=>'button']); ?>
 							<?php echo anchor("home/edit/{$student->id}", 'Update Student', ['class'=>'btn btn-success'],['role'=>'button']); ?>
-							<?php echo anchor("home/delete", 'Delete Student', ['class'=>'btn btn-danger'],['role'=>'button'],['onclick'=>"return confirm('Are you sure you want this student?');"]); ?>
+							<?php echo anchor("home/delete/{$student->id}", 'Delete Student', ['class'=>'btn btn-danger'],['role'=>'button'],['onclick'=>"return confirm('Are you sure you want this student?');"]); ?>
 						</td>
 					</tr>
 					<?php } ?>

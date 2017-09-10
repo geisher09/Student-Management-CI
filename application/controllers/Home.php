@@ -87,6 +87,27 @@
 			
 		}
 
+		public function delete($student_id){
+            	$this->load->model('sm_model');
+
+            	if ($this->sm_model->deleteStudents($student_id)){
+             		$this->session->set_flashdata('response', 'Deleted Succesfully!');
+				}
+
+				else{
+             		$this->session->set_flashdata('response', 'Failed to Delete');
+				}
+				return redirect('home');
+
+		}
+
+		public function view($student_id){
+
+			$this->load->model('sm_model');
+		 	$studentf = $this->sm_model->getAllStudents($student_id);
+			$this->load->view('view',['studf'=>$studentf]);
+		}
+
 	}
 
 

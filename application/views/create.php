@@ -74,7 +74,7 @@ include('header.php');
 				      	<div class="col-lg-10">
  				                <div class="form-group">
 							      <div class="col-sm-6 col-md-4">
-							        <select name="cname" class="form-control">	
+							        <select name="course" class="form-control">	
 							        <?php if(isset($courses)): ?>
 									<?php foreach ($courses as $course){ ?>
 							          <option value="<?php echo $course->cname; ?>	"><?php echo $course->cname; ?></option>

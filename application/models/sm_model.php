@@ -30,6 +30,17 @@
 				->update('student', $data);
 		}
 
+		public function deleteStudents($student_id){
+			return $this->db->delete('student', array('id' => $student_id));
+		}
+
+		public function viewStudents($student_id){
+			// $query = $this->db->get_where('student', array('id'=>$student_id));
+			// if($query->num_rows()>0){
+			// 	return $query->row();
+			// }
+			echo $student_id;
+		}
 	}
 
 ?>
