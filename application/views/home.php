@@ -7,7 +7,7 @@
 			<?php echo $error; ?>
 		</div> 
 		<?php endif; ?>
-		<div class="col-sm-12">
+		<div class="col-sm-11">
 			<div style="margin-left:800px; float:left">
 				<?php echo anchor("home/create", 'New Student', ['class'=>'btn btn-primary'],['role'=>'button']); ?>
 			</div>

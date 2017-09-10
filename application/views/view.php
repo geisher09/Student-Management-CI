@@ -4,7 +4,7 @@ include('header.php');
 <div style="margin-left:25%">
 	<div class="container bg-default">
 		<h2>View Student</h2>
-		<?php  echo form_open("home/update/{$studf->id}", ['class'=>'form-horizontal']); ?>
+		<?php  echo form_open("home/view/{$studf->id}", ['class'=>'form-horizontal']); ?>
 			  <fieldset>
 			  	<div class="container bg-info">
 			  	<div class="row">
