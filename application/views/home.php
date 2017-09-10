@@ -11,7 +11,7 @@
 			<div style="margin-left:800px; float:left">
 				<?php echo anchor("home/create", 'New Student', ['class'=>'btn btn-primary'],['role'=>'button']); ?>
 			</div>
-			<table class="table table-list-search">
+			<table class="table table-list-search table-bordered table-hover table-condensed">
 				<thead>
 					<tr>
 						<th>ID No</th>
@@ -32,7 +32,7 @@
 						<td><?php echo $student->sex; ?></td>
 						<td>
 							<?php echo anchor("home/profile", 'View Student', ['class'=>'btn btn-info'],['role'=>'button']); ?>
-							<?php echo anchor("home/edit", 'Update Student', ['class'=>'btn btn-success'],['role'=>'button']); ?>
+							<?php echo anchor("home/edit/{$student->id}", 'Update Student', ['class'=>'btn btn-success'],['role'=>'button']); ?>
 							<?php echo anchor("home/delete", 'Delete Student', ['class'=>'btn btn-danger'],['role'=>'button'],['onclick'=>"return confirm('Are you sure you want this student?');"]); ?>
 						</td>
 					</tr>

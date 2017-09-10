@@ -11,7 +11,7 @@
 	<script src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>" /></script>
 	<script src="<?php echo base_url("assets/js/search.js"); ?>" /></script>
 	<style type="text/css">
-		.active{ 
+		.active { 
 		    background-color: #92BABB;
 		}
 		body {
@@ -24,6 +24,6 @@
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">Menu</h3>
   <a href="<?php echo site_url('home') ?>" class="w3-bar-item w3-button active">Student Management</a>
-  <a href="#" class="w3-bar-item w3-button">Courses</a>
+  <a href="<?php echo site_url('home/courses') ?>" class="w3-bar-item w3-button">Courses</a>
   <a href="#" class="w3-bar-item w3-button">Logout</a>
 </div>
