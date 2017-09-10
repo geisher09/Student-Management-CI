@@ -8,7 +8,7 @@
 		</div> 
 		<?php endif; ?>
 		<div class="col-sm-10">
-			<div style="margin-left:800px; float:left">
+			<div style="margin-left:780px; float:left">
 				<?php echo anchor("home/createc", 'New course', ['class'=>'btn btn-primary'],['role'=>'button']); ?>
 			</div>
 			<table class="table table-list-search table-bordered table-hover table-condensed">

@@ -76,15 +76,16 @@
             else{
             	$this->load->model('sm_model');
 			 	$students = $this->sm_model->getStudents();
-				$this->load->view('create', ['students'=>$students]);
+				$courses = $this->sm_model->getCourses();
+				$this->load->view('create', ['students'=>$students,'courses'=>$courses]);
             }
 		}
 
 		public function edit( $student_id ){
 			    $this->load->model('sm_model');
 				$courses = $this->sm_model->getCourses();
-			 	$studentf = $this->sm_model->getAllStudents($student_id);
-				$this->load->view('update',['studf'=>$studentf,'courses'=>$courses]);
+			 	$students = $this->sm_model->getAllStudents($student_id);
+				$this->load->view('update',['studf'=>$students,'courses'=>$courses]);
 		}
 
 		public function editc( $course_id ){
@@ -116,9 +117,9 @@
             }
             else{
             	$this->load->model('sm_model');
-			 	$students = $this->sm_model->getStudents();
+			 	$students = $this->sm_model->getAllStudents($student_id);
 			 	$courses = $this->sm_model->getCourses();
-				$this->load->view('update', ['students'=>$students,'courses'=>$courses]);
+				$this->load->view('update', ['studf'=>$students,'courses'=>$courses]);
             }
 			
 		}
@@ -144,7 +145,10 @@
 
             }
             else{
-            	$this->load->view('update_course');
+
+			    $this->load->model('sm_model');
+			 	$course = $this->sm_model->getAllCourse($course_id);
+				$this->load->view('update_course',['course'=>$course]);
             }
 		}
 
